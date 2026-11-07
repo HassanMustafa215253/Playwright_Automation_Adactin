@@ -1,0 +1,27 @@
+{
+  "validBooking": [
+    {
+      "firstName": "Hassan",
+      "lastName": "Muatafa",
+      "address": "Karachi Pakistan",
+      "ccNumber": "1234567812345678",
+      "ccType": "VISA",
+      "ccMonth": "3",
+      "ccYear": "2028",
+      "cvv": "123"
+    }
+  ],
+  "invalidCard": [
+    {
+      "firstName": "Hassan",
+      "lastName": "Muatafa",
+      "address": "Karachi Pakistan",
+      "ccNumber": "1234",
+      "ccType": "VISA",
+      "ccMonth": "3",
+      "ccYear": "2028",
+      "cvv": "1",
+      "ExpectedError": "Please Enter your 16 Digit Credit Card Number"
+    }
+  ]
+}

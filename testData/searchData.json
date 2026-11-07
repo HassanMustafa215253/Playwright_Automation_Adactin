@@ -1,0 +1,15 @@
+{
+  "validSearch": [
+    {
+      "location": "Sydney",
+      "hotel": "Hotel Creek",
+      "roomType": "Standard",
+      "rooms": "1",
+      "checkIn": "10/12/2026",
+      "checkOut": "12/12/2026",
+      "adults": "2",
+      "children": "0",
+      "ExpectedError": "Please Select a Location"
+    }
+  ]
+}

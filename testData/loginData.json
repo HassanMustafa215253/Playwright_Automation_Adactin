@@ -1,0 +1,16 @@
+{
+  "validUsers": [
+    {
+      "username": "HassanMustafa",
+      "password": "23k0817",
+      "ExpectedMsg": "Welcome to Adactin Group of Hotels"
+    }
+  ],
+  "invalidUsers": [
+    {
+      "username": "wronguser123",
+      "password": "wrongpass123",
+      "ExpectedMsg": "Invalid Login details or Your Password might have expired."
+    }
+  ]
+}
