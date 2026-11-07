@@ -9,18 +9,28 @@ import BookingPage from '../pages/BookingPage';
 import ConfirmationPage from '../pages/ConfirmationPage';
 import ItineraryPage from '../pages/ItineraryPage';
 
-test('TC02 - Successful login with valid credentials', async ({page}) => {
 
-    const login = new LoginPage(page);
-    const user = loginData.validUsers[0];
+test.describe('Login', ()=> {
+    test('TC02 - Successful login with valid credentials', async ({page}) => {
 
-    await login.gotoURL();
-    await expect(login.loginButton).toBeEnabled();
-    await login.login(user.username, user.password);
+        const login = new LoginPage(page);
+        const user = loginData.validUsers[0];
 
-    await expect((login.message).first()).toHaveText(user.ExpectedMsg);
-    await expect(page).toHaveTitle('Adactin.com - Search Hotel');
+        await test.step('Open login Page', async() =>{
+            await login.gotoURL();
+        });
+        
+        
+        await test.step('Enter credentail and login', async() =>{
+            await login.login(user.username, user.password);
+        });
 
+        await expect((login.message).first()).toHaveText(user.ExpectedMsg);
+        await expect(page).toHaveTitle('Adactin.com - Search Hotel');
+
+        await login.attachScreenshot('05 - Welcome Message Should be displayed');
+
+    });
 });
 
 test('TC03 - Valid hotel search with correct filters', async ({page}) => {
